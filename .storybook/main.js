@@ -6,7 +6,7 @@ module.exports = {
     builder: 'webpack5'
   },
   webpackFinal: (config) => {
-    config.resolve.modules.push(`${process.cwd()}/src`)
-    return config
+    config.resolve.modules.push(`${process.cwd()}/src`);
+    return config;
   }
-}
+};
