@@ -28,7 +28,12 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "5.3.3",
-    "styled-media-query": "^2.1.2"
+    "styled-media-query": "^2.1.2",
+    "@styled-icons/boxicons-regular": "^10.34.0",
+    "@styled-icons/boxicons-solid": "^10.34.0",
+    "@styled-icons/fa-brands": "^10.34.0",
+    "@styled-icons/material-outlined": "^10.34.0",
+    "@styled-icons/remix-fill": "^10.18.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "6.4.17",
