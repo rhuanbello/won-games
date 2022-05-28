@@ -1,6 +1,5 @@
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helpers';
-import 'jest-styled-components';
 import Heading from '.';
 
 describe('<Heading />', () => {
@@ -21,7 +20,7 @@ describe('<Heading />', () => {
   it('should render a heading with a line to the left side', () => {
     renderWithTheme(<Heading lineSide="left">Won Games</Heading>);
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
-      'border-left': '0.7rem solid #3CD3C1'
+      'border-left': '0.7rem solid #F231A5'
     });
   });
 
@@ -34,5 +33,40 @@ describe('<Heading />', () => {
         modifier: '::after'
       }
     );
+  });
+
+  it('should render a heading with a small size', () => {
+    renderWithTheme(<Heading size="small">Won Games</Heading>);
+    expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
+      'font-size': '1.6rem'
+    });
+
+    expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyleRule(
+      'width',
+      '3rem',
+      {
+        modifier: '::after'
+      }
+    );
+  });
+
+  it('should render a heading with a primary line color', () => {
+    renderWithTheme(
+      <Heading lineColor="primary" lineSide="left">
+        Won Games
+      </Heading>
+    );
+    const heading = screen.getByRole('heading', { name: /won games/i });
+    expect(heading).toHaveStyle({ 'border-left': '0.7rem solid #F231A5' });
+  });
+
+  it('should render a heading with a secondary line color', () => {
+    renderWithTheme(
+      <Heading lineColor="secondary" lineSide="left">
+        Won Games
+      </Heading>
+    );
+    const heading = screen.getByRole('heading', { name: /won games/i });
+    expect(heading).toHaveStyle({ 'border-left': '0.7rem solid #3CD3C1' });
   });
 });
