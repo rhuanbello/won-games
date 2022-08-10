@@ -8,7 +8,7 @@
   <img src="./.github/screenshot.png" />
 </p>
 
-Won Games is an E-commerce developed with Next.js to learn and practice advanced concepts of React, such as development directed to components, global state management, GraphQL, Server-side redering, static site generation, content management via CMS with Strapi and development of components with TDD. <br />
+Won Games is an E-commerce developed with Next.js to learn and practice advanced concepts of React, such as development directed to components, global state management, GraphQL, Server-side rendering, static site generation, content management via CMS with Strapi and development of components with TDD. <br />
 
 ## Technologies 🚀
 
