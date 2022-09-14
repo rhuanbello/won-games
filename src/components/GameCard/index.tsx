@@ -3,35 +3,36 @@ import {
   Favorite,
   FavoriteBorder
 } from '@styled-icons/material-outlined';
-import Button from 'components/Button';
+
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon';
+import Button from 'components/Button';
 import * as S from './styles';
 
-export type GameCardsProps = {
+export type GameCardProps = {
   title: string;
   developer: string;
   img: string;
   price: string;
   promotionalPrice?: string;
   favorite?: boolean;
-  onFav?: () => void;
   ribbon?: React.ReactNode;
   ribbonColor?: RibbonColors;
   ribbonSize?: RibbonSizes;
+  onFav?: () => void;
 };
 
 const GameCard = ({
+  title,
   developer,
   img,
   price,
-  title,
   promotionalPrice,
   favorite = false,
   ribbon,
   ribbonColor = 'primary',
-  ribbonSize = 'normal',
+  ribbonSize = 'small',
   onFav
-}: GameCardsProps) => (
+}: GameCardProps) => (
   <S.Wrapper>
     {!!ribbon && (
       <Ribbon color={ribbonColor} size={ribbonSize}>
@@ -48,9 +49,9 @@ const GameCard = ({
       </S.Info>
       <S.FavButton onClick={onFav} role="button">
         {favorite ? (
-          <Favorite aria-label="Add to wishlist" />
+          <Favorite aria-label="Remove from Wishlist" />
         ) : (
-          <FavoriteBorder aria-label="Add to wishlist" />
+          <FavoriteBorder aria-label="Add to Wishlist" />
         )}
       </S.FavButton>
       <S.BuyBox>

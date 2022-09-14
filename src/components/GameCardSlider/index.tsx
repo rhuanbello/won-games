@@ -2,7 +2,7 @@ import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/Arrow
 import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos';
 
 import Slider, { SliderSettings } from 'components/Slider';
-import GameCard, { GameCardsProps } from 'components/GameCard';
+import GameCard, { GameCardProps } from 'components/GameCard';
 
 import * as S from './styles';
 
@@ -46,7 +46,7 @@ const settings: SliderSettings = {
 };
 
 export type GameCardSliderProps = {
-  items: GameCardsProps[];
+  items: GameCardProps[];
   color?: 'white' | 'black';
 };
 

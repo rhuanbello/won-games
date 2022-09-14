@@ -3,27 +3,24 @@ import media from 'styled-media-query';
 
 import * as RibbonStyles from 'components/Ribbon/styles';
 
-type ImageProps = {
-  src: string;
-};
-
 export const Wrapper = styled.main`
   position: relative;
-
   ${media.lessThan('large')`
     ${RibbonStyles.Wrapper} {
       right: 0;
-
       &::before {
         display: none;
       }
     }
   `}
-
   ${media.greaterThan('medium')`
     box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   `}
 `;
+
+type ImageProps = {
+  src: string;
+};
 
 export const Image = styled.div<ImageProps>`
   ${({ theme, src }) => css`
@@ -32,8 +29,7 @@ export const Image = styled.div<ImageProps>`
     background-color: ${theme.colors.lightGray};
     background-image: url(${src});
     background-position: center center;
-    background-size: cover;,
-
+    background-size: cover;
     ${media.greaterThan('medium')`
       height: 58rem;
     `}
@@ -45,7 +41,6 @@ export const Caption = styled.div`
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     padding: ${theme.spacings.small};
-
     ${media.greaterThan('medium')`
       border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
       padding: ${theme.spacings.large};
@@ -73,14 +68,12 @@ export const Subtitle = styled.h3`
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.normal};
     margin-bottom: ${theme.spacings.xsmall};
-
     strong {
       color: ${theme.colors.primary};
       font-weight: ${theme.font.bold};
     }
-
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.large}; 
+      font-size: ${theme.font.sizes.large};
     `}
   `}
 `;

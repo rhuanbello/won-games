@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import GameCard, { GameCardsProps } from '.';
+import GameCard, { GameCardProps } from '.';
 
 export default {
   title: 'GameCard',
@@ -17,18 +17,18 @@ export default {
   },
   parameters: {
     backgrounds: {
-      default: 'dark'
+      default: 'won-dark'
     }
   }
 } as Meta;
 
-export const Default: Story<GameCardsProps> = (args) => (
+export const Default: Story<GameCardProps> = (args) => (
   <div style={{ width: '30rem' }}>
     <GameCard {...args} />
   </div>
 );
 
-export const WithRibbon: Story<GameCardsProps> = (args) => (
+export const WithRibbon: Story<GameCardProps> = (args) => (
   <div style={{ width: '30rem' }}>
     <GameCard {...args} />
   </div>

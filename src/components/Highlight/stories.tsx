@@ -1,27 +1,22 @@
 import { Story, Meta } from '@storybook/react';
-import Hightlight, { HighlightProps } from '.';
+import Highlight, { HighlightProps } from '.';
+import item from './mock';
 
 export default {
   title: 'Hightlight',
-  component: Hightlight,
-  args: {
-    title: 'Red Dead is back',
-    subtitle: 'Come see the new Red Dead Redemption 2',
-    backgroundImage: '/img/red-dead-img.jpg',
-    buttonLabel: 'Buy now',
-    buttonLink: '/rdr2'
-  }
+  component: Highlight,
+  args: { ...item }
 } as Meta;
 
 export const Default: Story<HighlightProps> = (args) => (
   <div style={{ maxWidth: '104rem' }}>
-    <Hightlight {...args} />
+    <Highlight {...args} />
   </div>
 );
 
 export const WithFloatImage: Story<HighlightProps> = (args) => (
   <div style={{ maxWidth: '104rem' }}>
-    <Hightlight {...args} />
+    <Highlight {...args} />
   </div>
 );
 
