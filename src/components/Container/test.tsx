@@ -15,6 +15,20 @@ describe('<Container />', () => {
       theme.grid.container
     );
 
-    expect(container.firstChild).toMatchInlineSnapshot();
+    expect(container.firstChild).toMatchInlineSnapshot(`
+      .c0 {
+        max-width: 130rem;
+        margin-inline: auto;
+        padding-inline: calc(3.2rem / 2);
+      }
+
+      <main
+        class="c0"
+      >
+        <span>
+          Won Games
+        </span>
+      </main>
+    `);
   });
 });
