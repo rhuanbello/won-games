@@ -7,7 +7,7 @@ export type HeadingProps = {
   color?: 'white' | 'black';
   lineSide?: 'left' | 'bottom' | 'none';
   lineColor?: LineColors;
-  size?: 'small' | 'medium';
+  size?: 'small' | 'medium' | 'huge';
 };
 
 const Heading = ({

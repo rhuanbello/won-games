@@ -35,7 +35,11 @@ const wrappersModifiers = {
 
       ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xxlarge};
-    `}
+    `},
+    `,
+
+    huge: (theme: DefaultTheme) => css`
+      font-size: ${theme.font.sizes.huge};
     `
   }
 };

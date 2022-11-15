@@ -96,7 +96,9 @@ const Footer = () => (
         <span>Lorem, ipsum dolor.</span>
       </S.Column>
     </S.Content>
-    <S.Copyright>Won Games 2022 © All rights reserved.</S.Copyright>
+    <S.Copyright>
+      Won Games {new Date().getFullYear() + 1} © All rights reserved.
+    </S.Copyright>
   </S.Wrapper>
 );
 
